@@ -17,7 +17,6 @@ void main()
         {
         case 0:
             fprintf(f, "F");
-
             break;
         case 1:
             fprintf(f, "E");
@@ -34,4 +33,10 @@ void main()
             break;
         }
     }
+    fclose(f);
+    f = fopen("Teste.txt", "r");
+    char s[l];
+    fgets(s, l + 4, f);
+    printf("%s\n", s);
+    fclose(f);
 }
