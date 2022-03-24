@@ -4,16 +4,13 @@
 void main()
 {
     int tam, i, k = 1;
-    char *s;
+    char *s = NULL;
     scanf(" %d", &tam);
-    if (tam == 0)
+    if (tam <= 0)
     {
         return;
     }
-    if ((s = (char *)malloc(sizeof(char) * (tam + 1))) == NULL)
-    {
-        return;
-    }
+    s = (char *)malloc(sizeof(char) * (tam + 1));
     scanf(" %s", s);
     for (i = 1; i != tam; i++, k = 1)
     {
@@ -55,10 +52,6 @@ void main()
                 s[i - k] = '0';
             }
             break;
-            /*default:
-                printf("DEI ERRO, %d - %d - %c - %d\n\n\n", i, tam, s[i], k);
-                return;
-                break;*/
         }
     }
     for (i = 0; i != tam; i++)
